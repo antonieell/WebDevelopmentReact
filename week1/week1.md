@@ -69,3 +69,23 @@ JSX === Syntatic extenxion to JavaScript, is the special syntax that reacte usu 
                 </Media>
             </div>
         )
+
+## Getting Starterd with reactstrap
+
+-   Installing dependencies
+
+Install Bootstrap
+
+    yarn add bootstrap
+
+Install Reactstrap react-popper
+
+    yarn adda reactstrap react-popper
+
+-   Configure to use bootstrap 4
+
+Importing bootstrap into aplication, before "./index.css"
+
+    import "bootstrap/dist/css/bootstrap.min.css";
+
+-   Adding a navgation abar

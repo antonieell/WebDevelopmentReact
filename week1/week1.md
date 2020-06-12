@@ -1,11 +1,14 @@
 # Module Outline
 
--   Setting up Your Development Environment: Git and Node: Objectives and Outcomes
--   Introduction to React: Objectives and Outcomes
--   Redux
--   Fetch
+-   Get a basic overview of JavaScript frameworks and libraries
+-   Understand the architecture of an React application
+-   Scaffold out a starter React application using create-react-app, the command line tool
+-   Create a React component
+-   Construct the React component code and the view for your component using JSX and JavaScript
 
 ---
+
+# Introduction to React
 
 ## Setting up Your Development Environment: Git and Node: Objectives and Outcomes
 
@@ -89,3 +92,34 @@ Importing bootstrap into aplication, before "./index.css"
     import "bootstrap/dist/css/bootstrap.min.css";
 
 -   Adding a navgation abar
+
+import to apps.js react componnets
+
+    import { Navbar, NavbarBrand } from "reactstrap";
+
+Then
+
+    <div className="App">
+            <Navbar dark color="primary">
+                <div className="container">
+                    <NavbarBrand href="/">Ristorante Con Fusion</NavbarBrand>
+                </div>
+            </Navbar>
+        </div>
+
+# React Components
+
+-   A component returns a set of React elements that should appear on the screen
+-   Compponentes enable us to brak down the entire UI in to smaller reusable pices
+-   Different kinds of components can be defined in React
+
+-   Component Convetions
+
+    -   User-defined component names mus always start with a Capital Letter
+    -   Tags starting with lowercase latters are treated as DOM tags
+
+-   Create componentes
+    -   To organize the folder structure, create a folder called componets on src fo the project, then group all your componnets there.
+    -   A new componnets needs to impro React and { Componnetn }
+
+> import React, { Component } from "react";

@@ -1,40 +1,71 @@
-# Course Outline
+# Module Outline
 
--   React
--   Reactstrap
+-   Setting up Your Development Environment: Git and Node: Objectives and Outcomes
+-   Introduction to React: Objectives and Outcomes
 -   Redux
 -   Fetch
 
 ---
 
-## Module 1: Introduction to React
+## Setting up Your Development Environment: Git and Node: Objectives and Outcomes
 
-* Full Stack Web Development: The big Picture
-- Setting up your Development Environment: Git an Node
-- Introduction to React
-- React Components
+-   Set up a Git repository and perform basic Git operations
 
+-   Set up and use online Git repositories
+-   Use Node-based modules to perform basic operations.
 
-## Module 2: React Router and Single Page Applications
+### React Vocabulary
 
-- React Component Types
-- React Router
-- Single Page Applications
+-   One-way data flow
+-   JSX
+-   Components
+-   State
+-   Props
+-   Virtual DOM
+-   Element
+-   Flux / Redux
 
+## React Application Overview
 
-## Module 3: React Forms, Flux Architecture and Introduction to Redux 
+-   React Element
 
-- Controlled Forms
-- Uncontrolled Forms 
-- Introduction to Redux
-- React Redux Form 
+> Is the Smallest building blocks of React Apps
 
-## Module 4: More Redux and Client-server Communication
+        const element = <h' className="App-title"> Welcome to React </h1>
 
-- Redux Actions 
-- Redux Thunk
-- Client-Server Communication
-- Fetch
-- React Animations
-- Building and Deployment 
-- Testing 
+-   React Components
+
+> The Components are made of elements
+
+        class App extends Component{...}
+
+-   How do render the view to the DOM?
+
+> In the exemple above there is onde root node, on this node the element (first paramm) will be redenderized
+
+         ReactDOM.render(element, document.getElementById('root'));
+
+## Introduction to JSX
+
+JSX === Syntatic extenxion to JavaScript, is the special syntax that reacte usu when it expresses the various react elements
+
+    const element =  <h1>Hello, World!</h1>
+
+-   Shorthand notation to reproesent JaaScript function calls that evaluent to JavaScript objects
+
+    > The HTML syntax in the code gets mapped in react into a corresponding JavaScript object here
+
+-   Avoids aritifical separtion ofredenring logic from other UI logic
+
+    > ir means that ou shold be able to easily embed JavaScript like expressions into your JSX code, for example:
+
+        const dish = {id:0, name:"Uthappizza"}
+        return (
+            <div key={dish.id} className="col-12 mt-5">
+                <Media tag="li">
+                    <Media body className="ml-5">
+                        <Media heading>{dish.name}</Media>
+                    </Media>
+                </Media>
+            </div>
+        )

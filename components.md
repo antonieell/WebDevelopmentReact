@@ -1,16 +1,12 @@
 # Table of Contents
-- [Overview](#React-Components)
-- [State](#State)
-	- [Declare State](#declare-State)
-	- [Modifying State](#modifying-state)
-- [Props](#Props)
-- [Handling Events](#Handling-Events)
-- [Lifting State Up](#Lifting State Up)
-- [List and Keys](#List and Keys)
-- [React Components: Lifecycle ](#React Components: Lifecycle methods)
 
-
-
+-   [Overview](#React-Components)
+-   [State](#State) - [Declare State](#declare-State) - [Modifying State](#modifying-state)
+-   [Props](#Props)
+-   [Handling Events](#Handling-Events)
+-   [Lifting State Up](#Lifting-State-Up)
+-   [List and Keys](#List-and-Keys)
+-   [React Components: Lifecycle ](#React-Components-Lifecycle-methods)
 
 # Overview <a name="React-Components"></a>
 
@@ -24,7 +20,7 @@
     -   Tags starting with lowercase latter are treated as DOM tags
 
 -   Create components
-    
+
     -   A new components needs to import React and { Component }
 
 > import React, { Component } from "react";
@@ -53,13 +49,11 @@
     ...
     }
 
-
 ### Modifying state <a name="modifying-state"></a>
 
 Never do:
 
-
-	this.state.sekecteDish = dish;
+    this.state.sekecteDish = dish;
 
 State should only be modified using setState()
 
@@ -96,13 +90,12 @@ State should only be modified using setState()
         -   onFocus
         -   onBlur
         -   ...
- 
 
 ### Example
 
     <Card onClick={()=>this.onDishSelect(dish)}>
 
-## Lifting State Up <a name="Lifting State Up"></a>
+## Lifting State Up <a name="Lifting-State-Up"></a>
 
 -   Sometimes several components may share the same data
 
@@ -114,7 +107,7 @@ State should only be modified using setState()
 
 -   Changes to data in one component needs to be reflected to another component
 
-## List and Keys <a name="List and Keys"></a>
+## List and Keys <a name="List-and-Keys"></a>
 
 -   Lists are handled similar to JavaScript
 -   Keys should be given to elements inside the array
@@ -135,31 +128,27 @@ State should only be modified using setState()
         )
     })
 
-## React Components: Lifecycle methods <a name="React Components: Lifecycle methods"></a>
+## React Components: Lifecycle methods <a name="React-Components-Lifecycle-methods"></a>
 
 A react application is made up of multiple React components that are connected together to form the entire screen of your React applications view. Every time a React component needs to be included into your applications view then the component that hosts the specific part of the view will be created and added into added into the overall React component hierarchy.
 
 A component passes through life cycle for the component.
 
 1. The component doesn't exist.
-2. The component gets created 
+2. The component gets created
 3. Then it can be mounted into your React application
 4. It will exist at that point for a period of time
 5. The component can be removed from the hierarchy
-6. Unmounting the component 
+6. Unmounting the component
 
-So we have: 
+So we have:
 
-- Mounting 
-- Updating
-- Unmounting
+-   Mounting
+-   Updating
+-   Unmounting
 
 For each stage of the lifecycle component there are several lifecycle methods available.
 
 ### Mounting Stage methods
 
-- Called when an instance of a component is being  created and inserted into the DOM
-	- **Constructor()**
-	- **getDerivedStateFromProps()**
-	- **render()**
-	- **componentDidMount()**
+-   Called when an instance of a component is being created and inserted into the DOM - **Constructor()** - **getDerivedStateFromProps()** - **render()** - **componentDidMount()**

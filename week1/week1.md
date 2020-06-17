@@ -44,23 +44,23 @@
 
 -   How do render the view to the DOM?
 
-> In the exemple above there is onde root node, on this node the element (first paramm) will be redenderized
+> In the example above there is where root node, on this node the element (first param) will be renderized
 
          ReactDOM.render(element, document.getElementById('root'));
 
 ## Introduction to JSX
 
-JSX === Syntatic extenxion to JavaScript, is the special syntax that reacte usu when it expresses the various react elements
+JSX === Syntactic extension to JavaScript, is the special syntax that react usu when it expresses the various react elements
 
     const element =  <h1>Hello, World!</h1>
 
--   Shorthand notation to reproesent JaaScript function calls that evaluent to JavaScript objects
+-   Shorthand notation to represent JavaScript function calls that eventual to JavaScript objects
 
     > The HTML syntax in the code gets mapped in react into a corresponding JavaScript object here
 
--   Avoids aritifical separtion ofredenring logic from other UI logic
+-   Avoids artificial separation offering logic from other UI logic
 
-    > ir means that ou shold be able to easily embed JavaScript like expressions into your JSX code, for example:
+    > It means that  should be able to easily embed JavaScript like expressions into your JSX code, for example:
 
         const dish = {id:0, name:"Uthappizza"}
         return (
@@ -73,7 +73,7 @@ JSX === Syntatic extenxion to JavaScript, is the special syntax that reacte usu 
             </div>
         )
 
-## Getting Starterd with reactstrap
+## Getting Started with ReactStrap
 
 -   Installing dependencies
 
@@ -81,21 +81,21 @@ Install Bootstrap
 
     yarn add bootstrap
 
-Install Reactstrap react-popper
+Install ReactStrap react-popper
 
-    yarn adda reactstrap react-popper
+    yarn add  ReactStrap react-popper
 
 -   Configure to use bootstrap 4
 
-Importing bootstrap into aplication, before "./index.css"
+Importing bootstrap into application, before "./index.css"
 
     import "bootstrap/dist/css/bootstrap.min.css";
 
--   Adding a navgation abar
+-   Adding a navigation bar
 
-import to apps.js react componnets
+import to apps.js react components
 
-    import { Navbar, NavbarBrand } from "reactstrap";
+    import { Navbar, NavbarBrand } from "ReactStrap";
 
 Then
 
@@ -149,7 +149,7 @@ Then
     }
 
 
-### Modifing state
+### Modifying state
 
 Never do:
 
@@ -212,12 +212,12 @@ State should only be modified using setState()
 ## List and Keys
 
 -   Lists are handled similar to JavaScript
--   Keys should ve given to elements inside the array
+-   Keys should be given to elements inside the array
     -   Help identify which item have changed, are added or removed
 
-> For eache of items it is important specify the keys for each element inside an array, the reason to specify a key in react, is that whe there are changes to the number of items in the list, maybe a new item is added into the list or an items is removed from the list, any such change to the data may cause re-rendering of the list items. These keys are used by reacto identify wich item have been remove.
+> For each of items it is important specify the keys for each element inside an array, the reason to specify a key in react, is that where there are changes to the number of items in the list, maybe a new item is added into the list or an items is removed from the list, any such change to the data may cause re-rendering of the list items. These keys are used by react identify each item have been remove.
 
-**React only modifes thoes parts of the gum tree that need to updated**
+**React only modifies those parts of the gum tree that need to updated**
 
 ### Example
 
@@ -229,3 +229,5 @@ State should only be modified using setState()
             </div>
         )
     })
+
+## React Components: Lifecycle methods

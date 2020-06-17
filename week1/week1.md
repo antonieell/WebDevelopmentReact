@@ -60,7 +60,7 @@ JSX === Syntactic extension to JavaScript, is the special syntax that react usu 
 
 -   Avoids artificial separation offering logic from other UI logic
 
-    > It means that  should be able to easily embed JavaScript like expressions into your JSX code, for example:
+    > It means that should be able to easily embed JavaScript like expressions into your JSX code, for example:
 
         const dish = {id:0, name:"Uthappizza"}
         return (
@@ -106,4 +106,3 @@ Then
                 </div>
             </Navbar>
         </div>
-

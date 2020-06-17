@@ -1,11 +1,14 @@
 # Module Outline
 
--   Setting up Your Development Environment: Git and Node: Objectives and Outcomes
--   Introduction to React: Objectives and Outcomes
--   Redux
--   Fetch
+-   Get a basic overview of JavaScript frameworks and libraries
+-   Understand the architecture of an React application
+-   Scaffold out a starter React application using create-react-app, the command line tool
+-   Create a React component
+-   Construct the React component code and the view for your component using JSX and JavaScript
 
 ---
+
+# Introduction to React
 
 ## Setting up Your Development Environment: Git and Node: Objectives and Outcomes
 
@@ -41,23 +44,23 @@
 
 -   How do render the view to the DOM?
 
-> In the exemple above there is onde root node, on this node the element (first paramm) will be redenderized
+> In the example above there is where root node, on this node the element (first param) will be renderized
 
          ReactDOM.render(element, document.getElementById('root'));
 
 ## Introduction to JSX
 
-JSX === Syntatic extenxion to JavaScript, is the special syntax that reacte usu when it expresses the various react elements
+JSX === Syntactic extension to JavaScript, is the special syntax that react usu when it expresses the various react elements
 
     const element =  <h1>Hello, World!</h1>
 
--   Shorthand notation to reproesent JaaScript function calls that evaluent to JavaScript objects
+-   Shorthand notation to represent JavaScript function calls that eventual to JavaScript objects
 
     > The HTML syntax in the code gets mapped in react into a corresponding JavaScript object here
 
--   Avoids aritifical separtion ofredenring logic from other UI logic
+-   Avoids artificial separation offering logic from other UI logic
 
-    > ir means that ou shold be able to easily embed JavaScript like expressions into your JSX code, for example:
+    > It means that should be able to easily embed JavaScript like expressions into your JSX code, for example:
 
         const dish = {id:0, name:"Uthappizza"}
         return (
@@ -69,3 +72,37 @@ JSX === Syntatic extenxion to JavaScript, is the special syntax that reacte usu 
                 </Media>
             </div>
         )
+
+## Getting Started with ReactStrap
+
+-   Installing dependencies
+
+Install Bootstrap
+
+    yarn add bootstrap
+
+Install ReactStrap react-popper
+
+    yarn add  ReactStrap react-popper
+
+-   Configure to use bootstrap 4
+
+Importing bootstrap into application, before "./index.css"
+
+    import "bootstrap/dist/css/bootstrap.min.css";
+
+-   Adding a navigation bar
+
+import to apps.js react components
+
+    import { Navbar, NavbarBrand } from "ReactStrap";
+
+Then
+
+    <div className="App">
+            <Navbar dark color="primary">
+                <div className="container">
+                    <NavbarBrand href="/">Ristorante Con Fusion</NavbarBrand>
+                </div>
+            </Navbar>
+        </div>

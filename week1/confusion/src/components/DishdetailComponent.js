@@ -36,6 +36,7 @@ class DishDetail extends Component {
         }
     }
 
+<<<<<<< HEAD
     renderComments(dish) {
         var months = [
             "Jan",
@@ -78,15 +79,20 @@ class DishDetail extends Component {
         }
     }
 
+=======
+>>>>>>> FirstAssignment
     render() {
         return (
             <div className="row">
                 <div className="col-12 col-md-5 m-1">
                     {this.renderDish(this.props.selectedDish)}
                 </div>
+<<<<<<< HEAD
                 <div className="col-12 col-md-5 m-1">
                     {this.renderComments(this.props.selectedDish)}
                 </div>
+=======
+>>>>>>> FirstAssignment
             </div>
         );
     }

@@ -2,9 +2,9 @@
 
 -   [Overview](#React-Components)
 -   [Props](#Props)
--   [State and Lifecycle](#State)  
--  	[Lifting State Up](#Lifting-State-Up)
-- 	[Handling Events](#Handling-Events)
+-   [State and Lifecycle](#State)
+-   [Lifting State Up](#Lifting-State-Up)
+-   [Handling Events](#Handling-Events)
 -   [List and Keys](#List-and-Keys)
 -   [React Components: Lifecycle ](#React-Components-Lifecycle-methods)
 
@@ -16,21 +16,19 @@ Components let you split the UI into independent, reusable pieces, and think abo
 
 ### Function Component
 
-	function Welcome(props) {
-	  return <h1>Hello, {props.name}</h1>;
-	}
+    function Welcome(props) {
+      return <h1>Hello, {props.name}</h1>;
+    }
 
 ### Class Component
 
-	class Welcome extends React.Component {
-	  render() {
-	    return <h1>Hello, {this.props.name}</h1>;
-	  }
-	}
+    class Welcome extends React.Component {
+      render() {
+        return <h1>Hello, {this.props.name}</h1>;
+      }
+    }
 
-
-
-### Converting a Function to a Class 
+### Converting a Function to a Class
 
 You can convert a function component to a class in five steps:
 
@@ -40,19 +38,14 @@ You can convert a function component to a class in five steps:
 4. Replace props with this.props in the render() body.
 5. Delete the remaining empty function declaration.
 
-
-
-
 ### Component Conventions
 
 -   User-defined component names must always start with a Capital Letter
 -   Tags starting with lowercase latter are treated as DOM tags
 
-
 # Props <a name="Props"></a>
 
 Is a easy way of a parent component passing information to the child component through. A parent component maybe storing the **state and the information can be passed to the child component through**
-
 
 ### Example
 
@@ -64,28 +57,25 @@ Is a easy way of a parent component passing information to the child component t
 
     <Dishdetail dish={this.state.dishes} comments={this.state.comments}/>
 
-### Props are Read-Only 
+### Props are Read-Only
+
 Whether you declare a component as a function or a class, it must never modify its own props. Such functions are called “pure” because they do not attempt to change their inputs, and always return the same result for the same inputs. In contrast, this impure functions changes its own input.
 
 **All React components must act like pure functions with respect to their props**. Of course, application UIs are dynamic and change over time. In the next section, we will introduce a new concept of “state”. State allows React components to change their output over time in response to user actions, network responses, and anything else, without violating this rule.
 
-
-
-
 # State and Lifecycle <a name="State"></a>
 
-### Using State Correctly 
+### Using State Correctly
 
-- [Do Not Modify State Directly ](#modifying-state)
-- State Updates May Be Asynchronous 
-- State Updates are Merged 
-- [The Data Flows Down](#The-Data-Flows-Down)
-- [React Components Lifecycle methods](#React-Components-Lifecycle-methods)
-
+-   [Do Not Modify State Directly ](#modifying-state)
+-   State Updates May Be Asynchronous
+-   State Updates are Merged
+-   [The Data Flows Down](#The-Data-Flows-Down)
+-   [React Components Lifecycle methods](#React-Components-Lifecycle-methods)
 
 ### Overview
 
- Each component can store its own local information its state Can be passed as **props** to children and are Private and fully controlled by the component, **Only class components** can have local state,
+Each component can store its own local information its state Can be passed as **props** to children and are Private and fully controlled by the component, **Only class components** can have local state,
 
 ### Declare State: <a name="declare-State"></a>
 
@@ -117,16 +107,7 @@ State should only be modified using setState()
 
 This is commonly called a “top-down” or “unidirectional” data flow. Any state is always owned by some specific component, and any data or UI derived from that state can only affect components “below” them in the tree.
 
-
-
-
-
-
-
-
-
-
-### React Components: Lifecycle methods <a name="React-Components-Lifecycle-methods"></a>
+# React Components: Lifecycle methods <a name="React-Components-Lifecycle-methods"></a>
 
 A react application is made up of multiple React components that are connected together to form the entire screen of your React applications view. Every time a React component needs to be included into your applications view then the component that hosts the specific part of the view will be created and added into added into the overall React component hierarchy.
 
@@ -141,19 +122,6 @@ For each stage of the lifecycle component there are several lifecycle methods av
 #### Mounting Stage methods
 
 -   Called when an instance of a component is being created and inserted into the DOM - **Constructor()** - **getDerivedStateFromProps()** - **render()** - **componentDidMount()**
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 # Lifting State Up <a name="Lifting-State-Up"></a>
 
@@ -171,18 +139,15 @@ For each stage of the lifecycle component there are several lifecycle methods av
 
 Handling events is similar to the way you handle events on DOM elements, There are some syntax differences:
 
--	React events are named using camelCase, rather than lowercase.
--	With JSX you pass a function as the event handler, rather than a string.
-
+-   React events are named using camelCase, rather than lowercase.
+-   With JSX you pass a function as the event handler, rather than a string.
 
 ### Example
 
     <Card onClick={()=>this.onDishSelect(dish)}>
     <button onClick={activateLasers}>
 
-
-
-## List and Keys <a name="List-and-Keys"></a>
+# List and Keys <a name="List-and-Keys"></a>
 
 -   Lists are handled similar to JavaScript
 -   Keys should be given to elements inside the array
@@ -202,4 +167,3 @@ Handling events is similar to the way you handle events on DOM elements, There a
             </div>
         )
     })
-

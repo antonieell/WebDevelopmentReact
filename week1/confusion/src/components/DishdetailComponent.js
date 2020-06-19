@@ -19,8 +19,7 @@ function RenderDish({ dish }) {
 
 function RenderComments({ dish }) {
     var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-    console.log(dish);
-    if (dish != undefined) {
+    if (dish !== undefined) {
         let comentarios = dish.comments.map((dish) => {
             let numberMounth = parseInt(dish.date.substring(5, 7));
             let numberDay = parseInt(dish.date.substring(8, 10));

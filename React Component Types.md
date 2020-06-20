@@ -44,10 +44,72 @@ On the other hand, we can view a container component as being responsible for tr
 
 ### Functional components
 
-# React Router
-
-### Virtual DOM
+# Virtual DOM
 
 Browser Dom isa browser object, when something is render the browser dom is built up,
 
 In React application maintains a virtual DOM, it's a react Object. The virtual Dom in react terminology is a lightweight representation of a Browser DOM. Now, since the Virtual DOM is an in-memory object in your React application, the virtual DOM can be easily manipulated by React whenever it's required. Manupulations are extremely fast compared to manipylating th browser DOM, **Whe you change anythung in the Browser DOM, you need to go and re-render the web page allover again**, but the virtual DOM since it is maintained in memory by your react application, you can easily make change to the virtual DOM, whe any state of your componnets or changes to the props that a component obtains, then that may result in the component being re-rendered.
+
+# React Router
+
+### React Route layout
+
+-   <Switch>
+    -   Route path="/" component={Index}
+    -   Route path="/products" exact component={products}
+    -   Route path="/Dashbord" component={() => <Dashbord props={this.state.example}/>}
+    -   Route path="/Contact" component={Contact}
+    -   <Redirect to="/home" />
+-   <Switch/>
+
+# Single Page Applications (SPA)
+
+## What is a Single Page Application
+
+Web application or web site that fits in a single page
+
+-   No need to reload the entire page
+-   UX like a desktop/native application
+-   Most resources are retrived with a single page load
+-   Redraw parts of the page whe needed withou requiring a full server roudtrip
+
+## How are they different ?
+
+### Single page applications
+
+In a single page application, when the browser navigates to the website, the this will requesto for the application to be dowlaoda from the server side.
+
+> => Request Web Applications
+> Send Web app and Assests <=
+
+Changes to the client side, something like a click in a link, or send one form will initiate a new request to the server side, but in this case, very often you'are only downloading some data, perhaps in the form of JSON data from the server site. Most subsequent interactions for the server will be simple for download data in the form of JSON o XML. Once this data is downloaded, this data can be then used to render the new view within your application.
+
+> Request Web Application
+
+### Tradicional websites
+
+If you visit a website you made a requesting for acess to a particular page. For example:
+
+> Request index.html
+
+If you navigate to another page in your website, it will results in your browser sedding another requesto to the server to fetch the second page
+
+> Request contactus.html
+
+As you move form one page to another page, it will involve every new page to be loaded from the server and this would involve a roundtrip time to the server to fetch all the resources required for contructing those paages.
+
+> Request about.html
+> Request x.html
+> Request y.html
+> Request z.html
+> Request ....html
+
+In a website has many pages, every single piece that your web page requires for rendering will require a full roundtrip time to the servers. These pages have a lot in common, stufs like headers, footer and other pices of information
+
+## Challenges in SPA
+
+-   Search engine optimization
+-   Partitioning the responsability between client and server
+-   Maintaing history
+-   Analytics
+-   Speeding up the initial page load

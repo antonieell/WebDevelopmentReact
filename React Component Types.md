@@ -54,13 +54,15 @@ In React application maintains a virtual DOM, it's a react Object. The virtual D
 
 ### React Route layout
 
--   <Switch>
-    -   Route path="/" component={Index}
-    -   Route path="/products" exact component={products}
-    -   Route path="/Dashbord" component={() => <Dashbord props={this.state.example}/>}
-    -   Route path="/Contact" component={Contact}
-    -   <Redirect to="/home" />
--   <Switch/>
+-   <BrowserRouter>
+    -   <Switch>
+        -   Route path="/" component={Index}
+        -   Route path="/products" exact component={products}
+        -   Route path="/Dashbord" component={() => <Dashbord props={this.state.example}/>}
+        -   Route path="/Contact" component={Contact}
+        -   <Redirect to="/home" />
+    -   <Switch/>
+-   <BrowserRouter/>
 
 # Single Page Applications (SPA)
 

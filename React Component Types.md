@@ -64,10 +64,33 @@ In React application maintains a virtual DOM, it's a react Object. The virtual D
     -   <Switch/>
 -   <BrowserRouter/>
 
+
+### React Router: Parameters
+
+To pass parameters in the URL we need an aditional feture of the React Router; Route parameters. 
+
+- Paths specified as a URL 
+- Paths can also carry parameter values:
+    - /menu/42 wjre 42 is a route parameter values
+- Route parameters specified in the path specification as a token
+    -   path: 'menu/:id where id is the token
+
+- Route parameters canbe specified using a link parameter while specifyng the link 
+    - <Link to{`/menu/${dish.id}`}>
+- Route passes three props to the component:
+    - match = Is the one that carries the route parameters insde it as its own propoties
+    - location = Location where you are in the URL location 
+    - History = History will allow you to go back
+
+- match Object => Provides information aboute how a <Route path> matched the URL 
+    - Params: An object that contains key/value pair parsed from the URL corresponding to the dynamic segments of the path
+    - Ex: If path is specified as /menu/:id then a pth like /menu/42 will result in match.params.id begeing equal to 42  
+
+
 # Single Page Applications (SPA)
 
 ## What is a Single Page Application
-
+ 
 Web application or web site that fits in a single page
 
 -   No need to reload the entire page
